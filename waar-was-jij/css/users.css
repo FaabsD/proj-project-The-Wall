@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap');
+body {
+    margin: 0;
+    font-family: 'Sulphur Point', sans-serif;
+}
+nav {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 2em;
+    padding-right: 1em;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    background-color: #F2A015;
+}
+
+nav h1 {
+    color: #FFF952;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, .3);
+    padding-top: .6em;
+    margin: 0;
+}
+
+nav img {
+    height: 55px;
+    -webkit-filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, .16));
+}
+main {
+    text-align: center;
+}
+header{
+    text-align: center;
+    padding: .5em;
+    background-color: rgba(0, 0, 0, .25);
+}
+header h1{
+    font-size: 1.5em;
+    font-weight: 300;
+    margin: 0;
+}
+section{
+    width: 100vw;
+}
+section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+   
+}
+section h2{
+    text-transform: capitalize;
+}
+section p{
+    font-size: 1.2em;
+}
+.delete-button{
+    background-color: #F2A015;
+    height: 3rem;
+    border: none;
+    border-radius: 10em;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+@media screen and (min-width: 1275px){
+    body {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        background-color: #F2EFC4;
+    }
+
+    nav {
+        grid-column: 1/-1;
+        padding-top: .5em;
+        padding-bottom: .5em;
+        padding-right: 2em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        top: 0;
+        background-color: #F2A015;
+    }
+
+    nav h1 {
+        color: #FFF952;
+        text-shadow: 0px 3px 6px rgba(0, 0, 0, .3);
+        padding-top: .6em;
+        margin: 0;
+        grid-column: 2/4;
+        justify-self: center;
+    }
+
+    nav img {
+        height: 55px;
+        -webkit-filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, .16));
+        justify-self: right;
+    }
+
+    main {
+        grid-column: 2/5;
+        text-align: center;
+        background-color: #ffffff;
+    }
+    header {
+        grid-column: 2/5;
+        text-align: center;
+        padding: 2em;
+        background-color: rgba(0, 0, 0, .25);
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        font-weight: 300;
+        margin: 0;
+    }
+    section {
+        width: unset;
+    }
+
+    section img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+
+    }
+
+    section h2 {
+        text-transform: capitalize;
+    }
+
+    section p {
+        font-size: 1.2em;
+    }
+    .delete-button {
+        background-color: #F2A015;
+        height: 4em;
+        border: none;
+        border-radius: 10em;
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
