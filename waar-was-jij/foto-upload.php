@@ -52,7 +52,7 @@
         </aside>
         <main>
             <header>
-                <a href="#"><button>&larr;</button></a>
+                <a href="home.php"><button>&larr;</button></a>
                 <h2>Nieuwe foto plaatsen</h2>
             </header>
             <form action="foto-upload.php" method="post" enctype="multipart/form-data">
