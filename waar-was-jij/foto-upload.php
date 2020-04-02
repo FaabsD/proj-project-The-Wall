@@ -9,11 +9,41 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/upload.css">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Foto Uploaden</title>
     </head>
 
     <body>
         <nav>
+            <input type="checkbox" id="menuSwitcher" checked>
+            <div class="menu">
+                <label class="close-menu" for="menuSwitcher"><i class="fa fa-bars"></i></label>
+                <ul>
+                    <li>
+                        <a href="home.php">Home</a>
+                    </li>
+                    <li>
+                        <a class="active" href="foto-upload.php">Uploaden</a>
+                    </li>
+                    <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) : ?>
+                        <li>
+                            <a href="gebruikers-pagina.php">Mijn pagina</a>
+                        </li>
+                    <?php endif ?>
+                    <li>
+                        <a href="register.php">Registreren</a>
+                    </li>
+                    <li>
+                        <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) : ?>
+                            <a href="logout.php">Uitloggen</a>
+                        <?php else : ?>
+                            <a href="inlogscherm.php">Inloggen</a>
+                        <?php endif ?>
+                    </li>
+                </ul>
+            </div>
+            <label for="menuSwitcher" class="haal-menu"><i class="fa fa-bars"></i></label>
             <h1>Waar was jij?</h1>
             <img src="img/waar_was_jij_logo.png" alt="Logo">
         </nav>
@@ -32,7 +62,7 @@
                 <label for="picture">Foto om te uploaden:<br></label>
                 <input type="file" name="picture" required accept="image/jpeg, image/png">
                 <!-- Voer het uploaden uit als er een post request wordt verzonden -->
-                <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+                <?php if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // Sla alle fouten die er zijn op in een array
                     $errors = [];
                     //check of er een afbeelding is geupload
@@ -107,11 +137,12 @@
                         $description = $_POST["description"];
                         $picture = $new_filename;
                         $user_id = $_SESSION['user_id'];
-                        
+
                         // Bereid de SQL voor en bind de variabelen aan de juiste :placeholder parameters
                         $stmt = $connection->prepare(
                             "INSERT INTO user_images (Titel, Beschrijving, afbeelding, user_id) 
-                                VALUES (:Titel, :Beschrijving, :afbeelding, :user_id)");
+                                VALUES (:Titel, :Beschrijving, :afbeelding, :user_id)"
+                        );
                         $stmt->bindParam(':Titel', $title);
                         $stmt->bindParam(':Beschrijving', $description);
                         $stmt->bindParam(':afbeelding', $picture);
