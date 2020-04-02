@@ -139,7 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <img src="img/waar_was_jij_logo.png" alt="Logo">
     </nav>
     <aside>
-        <img src="Foto_inlogscherm.jpg" alt="Foto_inlogscherm">
+        <img src="img/Foto_inlogscherm.jpg" alt="Foto_inlogscherm">
     </aside>
     <main>
         <header>
