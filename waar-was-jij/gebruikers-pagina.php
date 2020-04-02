@@ -33,7 +33,7 @@ session_start();
                 <label class="close-menu" for="menuSwitcher"><i class="fa fa-bars"></i></label>
                 <ul>
                     <li>
-                        <a href="home.php">Home</a>
+                        <a href="index.php">Home</a>
                     </li>
                     <li>
                         <a href="foto-upload.php">Uploaden</a>
