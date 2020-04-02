@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Sulphur Point', sans-serif;
+    background-color: #F2EFC4;
+}
+
+nav{
+    background-color: #F2A015;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-right: 1em;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+}
+nav h1 {
+    margin: 0;
+    padding-top: .6em;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, .3);
+    color: #FFF952;
+}
+header, footer {
+    padding: 1em 2em;
+}
+nav img{
+    height: 55px;
+    -webkit-filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, .16));
+}
+.modaal-container img {
+    max-width: 100%;
+}
+main{
+    text-align: center;
+    
+}
+
+main img{
+    height: auto;
+    width: 100vw;
+    padding-bottom: 1em;
+    object-fit: cover;
+    object-position: center;
+}
+
+.thumb{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+.thumb img{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+div p{
+    margin-top: 2em;
+}
+
+/* modaal opmaken */
+.modaal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.modaal-container{
+    background-color: white;
+    max-width: 70vh;
+    padding: 2em;
+    max-height: 80vh;
+    overflow: auto;
+    animation: schuif-binnen .6s cubic-bezier(.17,.67,.8,1.45) forwards;
+}
+
+.sluit-knop{
+    float: right;
+    cursor: pointer;
+}
+
+.sluit-knop:hover{
+    color: red;
+    font-size: 1.5em;
+}
+
+.validatie img {
+    height: 1em;
+    width: auto;
+    border: 0;
+    margin: 0 .3em;
+    cursor: pointer;
+}
+
+@keyframes schuif-binnen{
+    0% {margin-top : -90vh}
+    100% {margin-top : 0}
+}
+
+@-moz-keyframes schuif-binnen{
+    0% {margin-top : -90vh}
+    100% {margin-top : 0}
+}
+
+@-webkit-keyframes schuif-binnen{
+    0% {margin-top : -90vh}
+    100% {margin-top : 0}
+}
+
+@-ms-keyframes schuif-binnen{
+    0% {margin-top : -90vh}
+    100% {margin-top : 0}
+}
+
+@-o-keyframes schuif-binnen{
+    0% {margin-top : -90vh}
+    100% {margin-top : 0}
+}
+@media screen and (min-width: 1275px){
+    body{
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        background-color: #F2EFC4;
+    }
+    nav{
+        grid-column: 1/-1;
+        padding-top: .5em;
+        padding-bottom: .5em;
+        padding-right: 2em;
+        padding-left: 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        top: 0;
+        background-color: #F2A015;
+    }
+    nav h1{
+        color: #FFF952;
+        text-shadow: 0px 3px 6px rgba(0, 0, 0, .3);
+        padding-top: .6em;
+        margin: 0;
+        grid-column: 2/4;
+        justify-self: center;
+    }
+    nav img{
+        height: 55px;
+        -webkit-filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, .16));
+        justify-self: right;
+
+    }
+    main{
+        grid-column: 2/5;
+        text-align: center;
+    }
+
+    .thumb {
+        display: unset;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+    }
+    main img {
+        height: auto;
+        width: 40vw;
+        padding-bottom: 1em;
+        object-fit: cover;
+        object-position: center;
+    }
+    .modaal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modaal-container {
+        background-color: white;
+        max-width: 90vw;
+        padding: 2em;
+        max-height: 80vh;
+        overflow: auto;
+        animation: schuif-binnen .6s cubic-bezier(.17, .67, .8, 1.45) forwards;
+    }
+
+    .sluit-knop {
+        float: right;
+        cursor: pointer;
+    }
+
+    .sluit-knop:hover {
+        color: red;
+        font-size: 1.5em;
+    }
+}
