@@ -34,7 +34,7 @@ require 'includes/connection.php';
             <label class="close-menu" for="menuSwitcher"><i class="fa fa-bars"></i></label>
             <ul>
                 <li>
-                    <a class="active" href="home.php">Home</a>
+                    <a class="active" href="index.php">Home</a>
                 </li>
                 <li>
                     <a href="foto-upload.php">Uploaden</a>
