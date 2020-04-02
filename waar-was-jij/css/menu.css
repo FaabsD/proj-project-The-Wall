@@ -1,0 +1,127 @@
+.menu {
+    background-color: #F2A015;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: left .5s ease-in-out;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    color: #FFF952;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, .5);
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 1rem 1rem;
+    display: block;
+    border-bottom: 1px solid black;
+}
+
+.menu a.active {
+    padding: 1rem 1.5rem;
+    border-left: .5rem solid #FFFF00;
+}
+
+.haal-menu {
+    color: #FFF952;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, .3);
+    display: block;
+    padding-top: .6em;
+    padding-left: 1em;
+    font-size: 1.5em;
+    
+}
+.haal-menu:hover{
+    cursor: pointer;
+}
+
+.close-menu {
+    color: #FFF952;
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, .3);
+    font-size: 1.5em;
+    display: block;
+    padding-top: .95em;
+    padding-bottom: .6em;
+    padding-left: 1em;
+}
+.close-menu:hover{
+    cursor: pointer;
+}
+#menuSwitcher {
+    display: none;
+}
+
+#menuSwitcher:checked~.menu {
+    left: -100vw;
+
+}
+
+@media screen and (min-width: 1275px){
+    .menu {
+        background-color: #F2A015;
+        position: fixed;
+        width: 25vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        transition: left .5s ease-in-out;
+    }
+
+    .menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu a {
+        color: #FFF952;
+        text-shadow: 0px 3px 6px rgba(0, 0, 0, .5);
+        font-size: 1.5rem;
+        text-decoration: none;
+        padding: 1rem 1rem;
+        display: block;
+        border-bottom: 1px solid black;
+    }
+
+    .menu a.active {
+        padding: 1rem 1.5rem;
+        border-left: .5rem solid #FFFF00;
+    }
+
+    .haal-menu {
+        color: #FFF952;
+        text-shadow: 0px 3px 6px rgba(0, 0, 0, .3);
+        display: block;
+        padding-top: .6em;
+        font-size: 1.5em;
+
+    }
+
+    .close-menu {
+        color: #FFF952;
+        text-shadow: 0px 3px 6px rgba(0, 0, 0, .3);
+        font-size: 1.5em;
+        display: block;
+        padding-top: .95em;
+        padding-bottom: .6em;
+        padding-left: 2em;
+    }
+
+    #menuSwitcher {
+        display: none;
+    }
+
+    #menuSwitcher:checked~.menu {
+        left: -25vw;
+
+    }
+}
