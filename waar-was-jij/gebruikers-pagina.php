@@ -30,7 +30,7 @@ session_start();
             <img src="img/waar_was_jij_logo.png" alt="Logo">
         </nav>
         <header>
-            <h1><?php echo "Welkom terug" . " " . $_SESSION['username'] ?></h1>
+            <h2><?php echo "Welkom terug" . " " . $_SESSION['username'] ?></h2>
         </header>
         <main>
             <!-- Maak voor iedere post met het corresponderende user id een section in het main element -->
