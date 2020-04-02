@@ -51,7 +51,7 @@
             $stmt->execute();
             ?>
             <h1>nieuwe gebruiker toegevoegd</h1>
-            <a href='index.php'><button>Ga terug naar homepagina</button></a>
+            <a href='home.php'><button>Ga terug naar homepagina</button></a>
             <a href='register.php'><button>Ga terug naar registratie</button></a>
         <?php endif ?>
     
