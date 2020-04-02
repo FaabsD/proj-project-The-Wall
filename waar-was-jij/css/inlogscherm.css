@@ -5,7 +5,6 @@
 nav {
     padding-top: .5em;
     padding-bottom: .5em;
-    padding-left: 2em;
     padding-right: 1em;
     display: flex;
     justify-content: space-between;
@@ -83,6 +82,7 @@ aside {
         padding-top: .5em;
         padding-bottom: .5em;
         padding-right: 2em;
+        padding-left: 1em;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         top: 0;
