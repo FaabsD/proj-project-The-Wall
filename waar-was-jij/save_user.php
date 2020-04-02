@@ -49,10 +49,8 @@
             $stmt->bindParam(':password', $veilig_wachtwoord);
             
             $stmt->execute();
+            header('location: index.php')
             ?>
-            <h1>nieuwe gebruiker toegevoegd</h1>
-            <a href='home.php'><button>Ga terug naar homepagina</button></a>
-            <a href='register.php'><button>Ga terug naar registratie</button></a>
         <?php endif ?>
     
     
