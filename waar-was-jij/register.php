@@ -48,7 +48,7 @@
     </aside>
     <main>
         <header>
-            <a href="#"><button>&larr;</button></a>
+            <a href="home.php"><button>&larr;</button></a>
             <h2>Registreren</h2>
         </header>
         <form action="save_user.php" method="post">
