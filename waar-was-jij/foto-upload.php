@@ -151,7 +151,7 @@
                         // Voor het SQL statement uit
                         $stmt->execute();
                         //stuur door naar startpagina
-                        header('location: index.php');
+                        header('location: home.php');
                     }
                 }
                 ?>
