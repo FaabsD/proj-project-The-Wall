@@ -49,7 +49,19 @@
             $stmt->bindParam(':password', $veilig_wachtwoord);
             
             $stmt->execute();
-            header('location: index.php')
+            ?>
+            <!-- Stuur een bevestigingsemail naar de nieuwe gebruiker -->
+            <?php
+                $to = $email;
+                $subject = 'Registratie Waar was jij? account';
+                $message_text = 'Beste'.' '.$fullname.'. '
+                    .'Jouw registratie is voltooid!'.' '.'Jij kunt nu inloggen met jouw gebruikersnaam: '
+                    .$gebruikersnaam. ' '.'en Wachtwoord.'.' '.'Groeten van het Waar was jij? team.'
+                    ;
+                $message = wordwrap($message_text, 25, "\n", true);
+                $headers = 'From; 19959@ma-web.nl';
+                mail($to, $subject, $message, $headers);
+                header('location: index.php');
             ?>
         <?php endif ?>
     
